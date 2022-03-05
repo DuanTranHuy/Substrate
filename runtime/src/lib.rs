@@ -63,7 +63,7 @@ pub type Index = u32;
 pub type Hash = sp_core::H256;
 
 /// TODO: EDIT
-/// GLMR, the native token, uses 18 decimals of precision.
+/// TOKEN, the native token, uses 18 decimals of precision.
 pub mod currency {
 	use super::Balance;
 
@@ -74,16 +74,16 @@ pub mod currency {
 	pub const KILOWEI: Balance = 1_000;
 	pub const MEGAWEI: Balance = 1_000_000;
 	pub const GIGAWEI: Balance = 1_000_000_000;
-	pub const MICROGLMR: Balance = 1_000_000_000_000;
-	pub const MILLIGLMR: Balance = 1_000_000_000_000_000;
-	pub const GLMR: Balance = 1_000_000_000_000_000_000;
-	pub const KILOGLMR: Balance = 1_000_000_000_000_000_000_000;
+	pub const MICROTOKEN: Balance = 1_000_000_000_000;
+	pub const MILLITOKEN: Balance = 1_000_000_000_000_000;
+	pub const TOKEN: Balance = 1_000_000_000_000_000_000;
+	pub const KILOTOKEN: Balance = 1_000_000_000_000_000_000_000;
 
-	pub const TRANSACTION_BYTE_FEE: Balance = 10 * MICROGLMR * SUPPLY_FACTOR;
-	pub const STORAGE_BYTE_FEE: Balance = 100 * MICROGLMR * SUPPLY_FACTOR;
+	pub const TRANSACTION_BYTE_FEE: Balance = 10 * MICROTOKEN * SUPPLY_FACTOR;
+	pub const STORAGE_BYTE_FEE: Balance = 100 * MICROTOKEN * SUPPLY_FACTOR;
 
 	pub const fn deposit(items: u32, bytes: u32) -> Balance {
-		items as Balance * 100 * MILLIGLMR * SUPPLY_FACTOR + (bytes as Balance) * STORAGE_BYTE_FEE
+		items as Balance * 100 * MILLITOKEN * SUPPLY_FACTOR + (bytes as Balance) * STORAGE_BYTE_FEE
 	}
 }
 
